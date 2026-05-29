@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Íconos</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+        }
+        .icon {
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instrucciones para crear íconos PWA</h1>
+    <p>Para una PWA completa, necesitas imágenes reales. Mientras tanto, puedes usar este emoji como ícono temporal:</p>
+    
+    <div class="icon">
+        <div style="font-size: 128px;">🏖️</div>
+        <p>Emoji beach</p>
+    </div>
+    
+    <h2>Crear íconos reales (recomendado):</h2>
+    <ol>
+        <li>Ve a <a href="https://www.favicon-generator.org/" target="_blank">favicon-generator.org</a></li>
+        <li>Sube una imagen (puedes usar el logo de SoyLocal RD)</li>
+        <li>Descarga los íconos generados</li>
+        <li>Copia los archivos a la carpeta <code>frontend/icons/</code></li>
+    </ol>
+    
+    <h2>Alternativa rápida:</h2>
+    <p>Usa este comando en PowerShell para crear íconos simples (requiere PowerShell 7+):</p>
+    <code>cd frontend/icons; 72..512 | ForEach-Object { New-Item -Path "icon-${_}x${_}.png" -ItemType File -Force }</code>
+</body>
+</html>
